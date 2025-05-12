@@ -3,7 +3,7 @@ const router = express.Router();
 const { getContacts, createContact } = require('../controllers/contactController');
 const protect = require('../middleware/authMiddleware');
 
-router.get('/', protect, getContacts);   // GET /api/contact
+router.get('/', getContacts);   // GET /api/contact
 router.post('/', protect, createContact); // POST /api/contact
 
 module.exports = router;
